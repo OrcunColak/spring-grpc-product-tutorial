@@ -1,3 +1,9 @@
 # Project exclude paths
-/client/target/
+/.idea/
 /proto-library/target/
+/client/target/
+/server/target/
+/proto-library/proto-library.iml
+/client/client.iml
+/server/server.iml
+/spring-grpc-tutorial.iml
