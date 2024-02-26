@@ -3,6 +3,43 @@
 The original idea is from  
 https://towardsdev.com/building-scalable-microservices-with-grpc-spring-boot-and-maven-fe49c377e450
 
+# gRPC Server + Client
+
+Server and client have separate dependencies
+
+For **gRPC Server** add
+
+```maven
+<dependency>
+  <groupId>net.devh</groupId>
+  <artifactId>grpc-server-spring-boot-starter</artifactId>
+  <version>2.15.0.RELEASE</version>
+</dependency>
+```
+
+For **gRPC Client** add
+
+```maven
+<dependency>
+  <groupId>net.devh</groupId>
+  <artifactId>grpc-client-spring-boot-starter</artifactId>
+  <version>2.15.0.RELEASE</version>
+</dependency>
+```
+
+But for server + client add
+
+```maven
+<dependency>
+  <groupId>net.devh</groupId>
+  <artifactId>grpc-spring-boot-starter</artifactId>
+  <version>2.15.0.RELEASE</version>
+</dependency>
+```
+
+See  
+https://github.com/yidongnan/grpc-spring-boot-starter/tree/master?tab=readme-ov-file#grpc-server--client
+
 # grpcurl
 
 To list grpc services use this command
