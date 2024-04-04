@@ -40,6 +40,11 @@ But for server + client add
 See  
 https://github.com/yidongnan/grpc-spring-boot-starter/tree/master?tab=readme-ov-file#grpc-server--client
 
+# gRPC Error Handling Example
+
+The original idea is from  
+https://medium.com/@javainuse/spring-boot-3-grpc-error-handling-example-a63711fc45ae
+
 # grpcurl
 
 To list grpc services use this command
@@ -48,3 +53,12 @@ See https://piotrminkowski.com/2023/08/29/introduction-to-grpc-with-spring-boot/
 ```
 grpcurl --plaintext localhost:9090 list
 ```
+
+# Proto fields
+
+bool
+string
+float
+
+uint32
+uint64

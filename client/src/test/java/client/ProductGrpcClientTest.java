@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 @SpringBootTest
 @Slf4j
@@ -17,15 +18,20 @@ class ProductGrpcClientTest {
     private ProductGrpcClient productGrpcClient;
 
     @Test
-    void testGetProductById() {
+    void getProductById() {
         ProductDto result = productGrpcClient.getProductById(1);
         assertNotNull(result);
         log.info("Product : {}", result);
-
     }
 
     @Test
-    void testGetProductByCategoryId() {
+    void getProductByIdUsingManagedChannel() {
+        ProductDto result = productGrpcClient.getProductByIdUsingManagedChannel(1);
+        assertNull(result);
+    }
+
+    @Test
+    void getProductByCategoryId() {
         List<ProductDto> result = productGrpcClient.getProductByCategoryId(1);
         assertNotNull(result);
         log.info("Product List : {}", result);
