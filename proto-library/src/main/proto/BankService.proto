@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package banking;
+
+option java_multiple_files = true;
+option java_package = "com.colak.banking";
+
+message AddressProofRequest {
+  string account_holder_name = 1;  // Provide the name of the account holder
+  string account_number = 2;       // Specify the account number
+
+  // Stream the PDF file as bytes
+  // The client will send chunks of the file using streaming
+  // By doing so, the client can send large files in multiple parts
+  // to enhance efficiency.
+  // The server will concatenate all the chunks at the end to form the complete document.
+  // If you wish to receive multiple files, you can define a repeated field of bytes.
+  // Make sure to add appropriate validation and error handling logic.
+  bytes pdf_file = 3;
+}
+
+message AddressProofResponse {
+  bool success = 1;  // Whether the upload was successful
+  string message = 2;  // A response message from the server
+}
+
+service BankService {
+  // Upload the address proof document as a PDF file using client streaming.
+  rpc UploadAddressProof(stream AddressProofRequest) returns (AddressProofResponse) {}
+}

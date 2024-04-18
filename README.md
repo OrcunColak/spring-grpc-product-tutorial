@@ -6,7 +6,11 @@ https://towardsdev.com/building-scalable-microservices-with-grpc-spring-boot-and
 # Server Streaming
 
 The original idea is from  
-https://towardsdev.com/building-scalable-microservices-with-grpc-spring-boot-and-maven-fe49c377e450
+https://www.javainuse.com/boot3/grpc3
+# Client Streaming
+
+The original idea is from  
+https://www.javainuse.com/boot3/grpc4
 
 # maven
 
