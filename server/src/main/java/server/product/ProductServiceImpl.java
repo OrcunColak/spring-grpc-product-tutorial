@@ -1,9 +1,9 @@
-package server;
+package server.product;
 
-import com.colak.proto.Category;
-import com.colak.proto.Product;
-import com.colak.proto.ProductList;
-import com.colak.proto.ProductServiceGrpc;
+import com.colak.proto.product.Category;
+import com.colak.proto.product.Product;
+import com.colak.proto.product.ProductList;
+import com.colak.proto.product.ProductServiceGrpc;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 

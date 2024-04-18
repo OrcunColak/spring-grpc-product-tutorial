@@ -1,9 +1,9 @@
-package client;
+package client.product;
 
-import com.colak.proto.Category;
-import com.colak.proto.Product;
-import com.colak.proto.ProductList;
-import com.colak.proto.ProductServiceGrpc;
+import com.colak.proto.product.Category;
+import com.colak.proto.product.Product;
+import com.colak.proto.product.ProductList;
+import com.colak.proto.product.ProductServiceGrpc;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.Status;
@@ -16,7 +16,7 @@ import java.util.List;
 
 @Service
 @Slf4j
-public class ProductGrpcClient {
+public class ProductService {
 
     // grpc-product-service is defined in application.yaml
     @GrpcClient("grpc-product-service")

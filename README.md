@@ -1,39 +1,47 @@
-# Readme
+# Request Response
 
 The original idea is from  
 https://towardsdev.com/building-scalable-microservices-with-grpc-spring-boot-and-maven-fe49c377e450
 
-# gRPC Server + Client
+# Server Streaming
+
+The original idea is from  
+https://towardsdev.com/building-scalable-microservices-with-grpc-spring-boot-and-maven-fe49c377e450
+
+# maven
 
 Server and client have separate dependencies
 
 For **gRPC Server** add
 
-```maven
+```xml
+
 <dependency>
-  <groupId>net.devh</groupId>
-  <artifactId>grpc-server-spring-boot-starter</artifactId>
-  <version>2.15.0.RELEASE</version>
+    <groupId>net.devh</groupId>
+    <artifactId>grpc-server-spring-boot-starter</artifactId>
+    <version>2.15.0.RELEASE</version>
 </dependency>
 ```
 
 For **gRPC Client** add
 
-```maven
+```xml
+
 <dependency>
-  <groupId>net.devh</groupId>
-  <artifactId>grpc-client-spring-boot-starter</artifactId>
-  <version>2.15.0.RELEASE</version>
+    <groupId>net.devh</groupId>
+    <artifactId>grpc-client-spring-boot-starter</artifactId>
+    <version>2.15.0.RELEASE</version>
 </dependency>
 ```
 
 But for server + client add
 
-```maven
+```xml
+
 <dependency>
-  <groupId>net.devh</groupId>
-  <artifactId>grpc-spring-boot-starter</artifactId>
-  <version>2.15.0.RELEASE</version>
+    <groupId>net.devh</groupId>
+    <artifactId>grpc-spring-boot-starter</artifactId>
+    <version>2.15.0.RELEASE</version>
 </dependency>
 ```
 
@@ -54,7 +62,7 @@ See https://piotrminkowski.com/2023/08/29/introduction-to-grpc-with-spring-boot/
 grpcurl --plaintext localhost:9090 list
 ```
 
-# Proto fields
+# Proto field examples
 
 bool
 string

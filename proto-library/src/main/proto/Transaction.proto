@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package banking;
+
+option java_multiple_files = true;
+option java_package = "com.colak.banking";
+
+// Message representing a client's account transaction request
+message AccountRequest {
+  string account_number = 1;
+  int32 duration_in_days = 2;
+}
+
+// Message representing a transaction detail
+message TransactionDetail {
+  string transaction_id = 1;
+  string transaction_type = 2;
+  float transaction_amount = 3;
+}
+
+message TransactionDetailList {
+  repeated TransactionDetail transaction_details = 1;
+}
+
+// Service for streaming transaction details
+service TransactionService {
+  // Method to stream transaction details for a given duration in days
+  rpc streamTransactions(AccountRequest) returns (stream TransactionDetailList);
+}

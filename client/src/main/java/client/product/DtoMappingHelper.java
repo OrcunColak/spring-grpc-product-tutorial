@@ -1,7 +1,7 @@
-package client;
+package client.product;
 
-import com.colak.proto.Product;
-import com.colak.proto.ProductList;
+import com.colak.proto.product.Product;
+import com.colak.proto.product.ProductList;
 
 import java.util.ArrayList;
 import java.util.List;

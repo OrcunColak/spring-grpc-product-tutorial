@@ -4,7 +4,7 @@ syntax = "proto3";
 
 option java_multiple_files = true;
 
-package com.colak.proto;
+package com.colak.proto.product;
 
 message Product {
   int32 product_id = 1;
@@ -26,7 +26,7 @@ message Category {
 service ProductService {
 
   //unary - synchronous
-  //request-response stype [not streaming]
+  //request-response type [not streaming]
   rpc getProductById(Product) returns(Product){}
   rpc getProductByCategoryId(Category) returns(ProductList){}
 }
